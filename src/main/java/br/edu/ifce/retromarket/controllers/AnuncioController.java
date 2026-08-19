@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import br.edu.ifce.retromarket.dtos.AnuncioResponseDTO;
 import br.edu.ifce.retromarket.entities.Anuncio;
 import br.edu.ifce.retromarket.entities.Completude;
 
@@ -31,7 +32,7 @@ public class AnuncioController {
   }
 
   @GetMapping
-  public List<Anuncio> listarAnuncios() {
+  public List<AnuncioResponseDTO> listarAnuncios() {
     return service.listarAnuncios();
   }
 }
