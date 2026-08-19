@@ -56,8 +56,7 @@ public class Anuncio {
 
   @Column(name = "titulo", length = 150, nullable = false)
   private String titulo;
-
-  @Lob
+  
   @Column(name = "descricao")
   private String descricao;
 
