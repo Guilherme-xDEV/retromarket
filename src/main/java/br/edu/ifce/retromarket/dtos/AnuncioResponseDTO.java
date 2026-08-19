@@ -10,5 +10,93 @@ public class AnuncioResponseDTO {
     private String urlFotoPrincipal;
     private PlataformaResumoDTO plataforma;
     private CategoriaResumoDTO categoria;
+ 
+    public AnuncioResponseDTO() {}
 
+    public AnuncioResponseDTO(String titulo, String preco, String condicao, String completude, String status,
+            String localizacao, String urlFotoPrincipal, PlataformaResumoDTO plataforma, CategoriaResumoDTO categoria) {
+        this.titulo = titulo;
+        this.preco = preco;
+        this.condicao = condicao;
+        this.completude = completude;
+        this.status = status;
+        this.localizacao = localizacao;
+        this.urlFotoPrincipal = urlFotoPrincipal;
+        this.plataforma = plataforma;
+        this.categoria = categoria;
+    }
+
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
+
+    public String getPreco() {
+        return preco;
+    }
+
+    public void setPreco(String preco) {
+        this.preco = preco;
+    }
+
+    public String getCondicao() {
+        return condicao;
+    }
+
+    public void setCondicao(String condicao) {
+        this.condicao = condicao;
+    }
+
+    public String getCompletude() {
+        return completude;
+    }
+
+    public void setCompletude(String completude) {
+        this.completude = completude;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public String getLocalizacao() {
+        return localizacao;
+    }
+
+    public void setLocalizacao(String localizacao) {
+        this.localizacao = localizacao;
+    }
+
+    public String getUrlFotoPrincipal() {
+        return urlFotoPrincipal;
+    }
+
+    public void setUrlFotoPrincipal(String urlFotoPrincipal) {
+        this.urlFotoPrincipal = urlFotoPrincipal;
+    }
+
+    public PlataformaResumoDTO getPlataforma() {
+        return plataforma;
+    }
+
+    public void setPlataforma(PlataformaResumoDTO plataforma) {
+        this.plataforma = plataforma;
+    }
+
+    public CategoriaResumoDTO getCategoria() {
+        return categoria;
+    }
+
+    public void setCategoria(CategoriaResumoDTO categoria) {
+        this.categoria = categoria;
+    }
+
+    
 }
