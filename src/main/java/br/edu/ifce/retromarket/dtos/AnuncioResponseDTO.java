@@ -1,8 +1,11 @@
 package br.edu.ifce.retromarket.dtos;
 
+import java.math.BigDecimal;
+import java.math.BigInteger;
+
 public class AnuncioResponseDTO {
     private String titulo;
-    private String preco;
+    private BigDecimal preco;
     private String condicao;
     private String completude;
     private String status;
@@ -13,7 +16,7 @@ public class AnuncioResponseDTO {
  
     public AnuncioResponseDTO() {}
 
-    public AnuncioResponseDTO(String titulo, String preco, String condicao, String completude, String status,
+    public AnuncioResponseDTO(String titulo, BigDecimal preco, String condicao, String completude, String status,
             String localizacao, String urlFotoPrincipal, PlataformaResumoDTO plataforma, CategoriaResumoDTO categoria) {
         this.titulo = titulo;
         this.preco = preco;
@@ -34,11 +37,11 @@ public class AnuncioResponseDTO {
         this.titulo = titulo;
     }
 
-    public String getPreco() {
+    public BigDecimal getPreco() {
         return preco;
     }
 
-    public void setPreco(String preco) {
+    public void setPreco(BigDecimal preco) {
         this.preco = preco;
     }
 
