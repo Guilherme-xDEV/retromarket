@@ -47,12 +47,17 @@ public class AnuncioService {
     private AnuncioResponseDTO toAnuncioResponseDTO(Anuncio anuncio) {
         AnuncioResponseDTO anuncioResponseDTO = new AnuncioResponseDTO();
 
+        anuncioResponseDTO.setId(anuncio.getId());
         anuncioResponseDTO.setTitulo(anuncio.getTitulo());
         anuncioResponseDTO.setPreco(anuncio.getPreco());
         anuncioResponseDTO.setLocalizacao(anuncio.getLocalizacao());
         anuncioResponseDTO.setCondicao(anuncio.getCondicao().getDescricao());
         anuncioResponseDTO.setCompletude(anuncio.getCompletude().getDescricao());
         anuncioResponseDTO.setStatus(anuncio.getStatus().getDescricao());
+
+        if (!anuncio.getFotos().isEmpty()) {
+            anuncioResponseDTO.setUrlFotoPrincipal(anuncio.getFotos().getFirst().getUrl());
+        }        
 
         anuncioResponseDTO.setPlataforma(new PlataformaResumoDTO(anuncio.getPlataforma().getId(), anuncio.getPlataforma().getNome()));
         anuncioResponseDTO.setCategoria(new CategoriaResumoDTO(anuncio.getCategoria().getId(), anuncio.getCategoria().getNome()));
